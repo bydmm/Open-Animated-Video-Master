@@ -1,0 +1,32 @@
+<div class="ui page grid">
+  <div class="row">
+    <div class="column">
+      <p id="notice"><%= notice %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h1 class="ui header"><%= @video.name %></h1>
+      <div class="ui divider"></div>
+      <p>
+        <video class="video-js vjs-default-skin" controls preload="auto" width="1100px" height="618px" data-setup='{}'>
+          <source src="<%= @video.drive_url %>" type='video/mp4'>
+        </video>
+      </p>
+      <p>
+        <a href="<%= @video.magnet %>" class="ui primary button">
+          <i class="play icon"></i>
+          Magnet Link
+        </a>
+        <a href="<%= @video.torrent_url %>" class="ui primary button">
+          <i class="cloud download icon"></i>
+          Torrent
+        </a>
+        <a href="<%= edit_video_path @video %>" class="ui green button">
+          <i class="edit icon"></i>
+          Edit
+        </a>
+      </p>
+    </div>
+  </div>
+</div>

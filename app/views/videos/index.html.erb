@@ -1,0 +1,37 @@
+<div class="ui page grid">
+  <div class="row">
+    <div class="column">
+      <p id="notice"><%= notice %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h1 class="ui header">Listing Videos</h1>
+      <div class="ui divider"></div>
+      <div class="ui cards">
+        <% @videos.each do |video| %>
+        <div class="card">
+          <div class="image">
+            <%= image_tag(video.avatar_url) if video.avatar? %>
+          </div>
+          <div class="content">
+            <div class="header"><%= video.name %></div>
+            <div class="description">
+              In a gritty and alternate 1985 the glory days of costumed vigilantes have been brought to a close by a government crackdown, but after one of the masked veterans is brutally murdered an investigation into the killer is initiated.
+            </div>
+          </div>
+          <div class="ui two bottom attached buttons">
+            <%= link_to edit_video_path(video), class: 'ui button' do %>
+              <i class="edit icon"></i> Edit
+            <% end %>
+            <div class="ui primary button">
+              <i class="play icon"></i>
+              Watch
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

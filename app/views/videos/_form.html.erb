@@ -1,0 +1,19 @@
+<%= simple_form_for @video do |f| %>
+  <%= f.input :name %>
+  <%= f.input :magnet, as: :string %>
+  <%= f.input :bango, as: :string %>
+  <%= f.input :avatar %>
+  <p>
+    <%= @video.avatar_url %>
+  </p>
+  <%= f.input :drive %>
+  <p>
+    <%= @video.drive_url %>
+  </p>
+  <%= f.input :torrent %>
+  <p>
+    <%= @video.torrent_url %>
+  </p>
+  <%= f.input :knight %>
+  <%= f.button :submit %>
+<% end %>
