@@ -10,8 +10,11 @@
       <div class="ui divider"></div>
       <p>
         <video class="video-js vjs-default-skin" controls preload="auto" width="1100px" height="618px" data-setup='{}'>
-          <source src="<%= @video.drive_url %>" type='video/mp4'>
+          <source src="<%= @video.url %>" type='video/mp4'>
         </video>
+      </p>
+      <p>
+        <%= @video.tags %>
       </p>
       <p>
         <a href="<%= @video.magnet %>" class="ui primary button">
